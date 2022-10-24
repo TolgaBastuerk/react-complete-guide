@@ -6,7 +6,12 @@ const Expenses = (props) => {
   return (
     <Card className="expenses">
       {props.items.map((item) => (
-        <ExpenseItem date={item.date} title={item.title} amount={item.amount} />
+        <ExpenseItem
+          date={item.date}
+          title={item.title}
+          amount={item.amount}
+          key={item.title}
+        />
       ))}
     </Card>
   );
